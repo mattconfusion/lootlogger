@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "LootLogger\\": "src/"
+    }
+  },
+  "config": {
+    "bin-dir": "vendor/bin/"
+    },"require": {
+      "league/climate": "^3.2"
+    }
+  }
