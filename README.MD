@@ -4,7 +4,7 @@
 ╩═╝└─┘└─┘ ┴   ╩═╝└─┘└─┘└─┘└─┘┴└─
 *** A loot log parser, really. *
 ```
-#Loot LootLogger
+# Loot Logger
 
  LootLogger: csv events tracker for your rpg sessions
 
