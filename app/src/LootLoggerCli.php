@@ -41,14 +41,14 @@ class LootLoggerCli {
           $this->printTable($results);
         }catch(\Exception $e){
           $this->climate->br()->shout("Error! {$e->getMessage()}");
+          $this->climate->usage();
         }
       }
 
       protected function printTable($results){
         $tableArray = array();
         foreach($results as $pcName => $resultsArray){
-          $resultsArray['PC'] = $pcName;
-          $tableArray[] = $resultsArray;
+          $tableArray[] = array('PC'=>$pcName) + $resultsArray;
         }
         $this->climate->br()->table($tableArray);
         unset($tableArray);
