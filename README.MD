@@ -6,8 +6,6 @@
 ```
 # Loot Logger
 
- LootLogger: csv events tracker for your rpg sessions
-
  Write in a csv file (or in your favourite spreadsheet) all the events occuring in a session
  which require tracking for later accounting (xp gained, spells spent, gold pieces earned). Follow this example:
 
@@ -29,3 +27,9 @@
  ```
  $ php lootlogger.php path/to/csv/file -p "newKeywordForPCsParty"
  ```
+Results will be displayed in an ASCII table directly in the console.
+
+## TODO
+
+Add comments to the table
+Add colors to the cli!
