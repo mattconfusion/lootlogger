@@ -12,6 +12,7 @@ class LootLoggerCli {
     $this->climate = new CLImate();
     $this->climate->forceAnsiOn();
     $this->climate->description("LootLogger, a loot log parser really.");
+    //$this->climate->clear();
     $this->climate->addArt(__DIR__. DIRECTORY_SEPARATOR);
     return $this;
   }
@@ -34,9 +35,10 @@ class LootLoggerCli {
           $this->climate->br()->draw('ll-title');
           $this->climate->arguments->parse();
           $this->lootLogger = new LootLogger($this->climate->arguments->get('path'),$this->climate->arguments->get('partykeyword'));
-          $this->climate->br()->whisper('CSV loaded.');
+          $this->climate->whisper('CSV loaded.')->br();
           $results = $this->lootLogger->parseCsv()->getPCsResults();
-
+          //print description
+          $this->printDescription($results);
           //print table
           $this->printTable($results);
         }catch(\Exception $e){
@@ -54,6 +56,14 @@ class LootLoggerCli {
         unset($tableArray);
       }
 
-
+      protected function printDescription($results){
+        foreach($results as $pcName => $resultsArray){
+          $this->climate->inline("<bold><invert>$pcName</invert></bold> - ");
+          foreach($resultsArray as $stat=>$value){
+            $this->climate->inline("<bold>$stat:</bold> $value; ");
+          }
+          $this->climate->br();
+        }
+      }
 
     }

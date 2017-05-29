@@ -12,7 +12,7 @@
 ```
  Teniviel,xp,+15,found secret door
  Muradin,gp,+10,found valuable necklace on the floor
- PARTY,xp,+60,fought goblins
+ party,xp,+60,fought goblins
  Aldestro+Bayern+Everard+Ramone,gp,+40,found hidden stash
  ```
  The CSV is written following these cases:
