@@ -32,6 +32,10 @@ class LootLogger {
     //main loop
     if (($handle = @fopen($this->pathToCsvFile, "r")) !== FALSE) {
       while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+        //skip empty lines in the csv
+        if(!array_filter($data)){
+            continue;
+        }
         $pcs = explode('+', $data[0]);
         foreach($pcs as $pc){
           //set name if pc is found for the first time
