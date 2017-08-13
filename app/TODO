@@ -1,0 +1,3 @@
+- refactor stuff: avoid calls inside functions, spread responsability
+- add winning criteria (like --wincrit "gp+xp")
+- if winning criteria specified, sort by winner in table
