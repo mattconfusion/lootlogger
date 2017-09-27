@@ -28,9 +28,9 @@ class LootLoggerCli {
           'description'  => 'CSV file containing the log of the loot.',
           'required'     => true,
         ],
-        'party-keyword'  => [
+        'partykeyword'  => [
           'prefix'       => 'p',
-          'longPrefix'   => 'partykeyword',
+          'longPrefix'   => 'party-keyword',
           'description'  => 'The keyword identifying a full party action in the log.',
           'defaultValue' => LootLogger::PARTYKEYWORD
         ],
@@ -41,16 +41,22 @@ class LootLoggerCli {
           'defaultValue' => self::OUTPUT_LIST
         ]
         ]);
-
+          //draw title
           $this->climate->br()->green()->draw('ll-title');
+
+          //parse args
           $this->climate->arguments->parse();
+
+          //load CSV
           $this->lootLogger = new LootLogger($this->climate->arguments->get('path'),$this->climate->arguments->get('partykeyword'));
           $this->climate->whisper('CSV loaded.')->br();
+
+          //parse CSV
           $results = $this->lootLogger->parseCsv()->getPCsResults();
-          $this->printList($results);
-          
-          //$this->printResults($this->climate->arguments->get('output'), $results);
-        }catch(\Exception $e){
+
+          //print results
+          $this->printResults($this->climate->arguments->get('output'), $results);
+        }catch(\Exception $e) {
           $this->climate->br()->shout("Error! {$e->getMessage()}");
           $this->climate->usage();
         }
