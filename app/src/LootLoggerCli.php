@@ -56,12 +56,20 @@ class LootLoggerCli {
 
           //print results
           $this->printResults($this->climate->arguments->get('output'), $results);
+
         }catch(\Exception $e) {
           $this->climate->br()->shout("Error! {$e->getMessage()}");
           $this->climate->usage();
         }
       }
 
+      /**
+       * Print the results in the specified format
+       *
+       * @param [string] $outputFormat 'table' or 'list'
+       * @param [array] $results
+       * @return void
+       */
       private function printResults($outputFormat, $results) {
         $outputFormat === self::OUTPUT_TABLE ? $this->printTable($results) : $this->printList($results);
       }
