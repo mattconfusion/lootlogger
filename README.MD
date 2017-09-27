@@ -1,8 +1,8 @@
 ```
-╦  ┌─┐┌─┐┌┬┐  ╦  ┌─┐┌─┐┌─┐┌─┐┬─┐
-║  │ ││ │ │   ║  │ ││ ┬│ ┬├┤ ├┬┘
-╩═╝└─┘└─┘ ┴   ╩═╝└─┘└─┘└─┘└─┘┴└─
-*** A loot log parser, really. *
+ __,  ____, ____, ____,  __,  ____, ____, ____, ____,____, 
+(-|  (-/  \(-/  \(-|    (-|  (-/  \(-/ _,(-/ _,(-|_,(-|__) 
+ _|__,_\__/,_\__/,_|,    _|__,_\__/,_\__| _\__| _|__,_|  \,
+(    (     (     (      (    (   A loot log parser, really.
 ```
 # Loot Logger
 
@@ -25,11 +25,20 @@
 
  Run **LootLogger** from an ANSI console:
  ```
- $ php lootlogger.php path/to/csv/file -p "newKeywordForPCsParty"
+ $ php lootlogger.php path/to/csv/file -o table
  ```
 Results will be displayed in an ASCII table directly in the console.
 
+Available params:
+
+**-p --party-keyword**: change the party keyowrd, default is **party**
+**-o --output**: output format, either *table* or *list* (default)
+
 ## TODO
 
-Add comments to the table
-Add colors to the cli!
+[x] Add comments to the table
+
+[√] Add colors to the cli!
+
+[x] Add tests
+ 

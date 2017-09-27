@@ -16,11 +16,12 @@ class LootLogger {
    * @param [type] $pathToCsvFile [description]
    * @param [type] $partyKeyword  [description]
    */
-  public function __construct($pathToCsvFile, $partyKeyword = self::PARTYKEYWORD){
+  public function __construct($pathToCsvFile, $partyKeyword){
     $this->pathToCsvFile = $pathToCsvFile;
-    if(isset($partyKeyword)){
-      $this->partyKeyword = $partyKeyword;
-    }
+    $this->partyKeyword = $partyKeyword;
+    // if(isset($partyKeyword)){
+    //   $this->partyKeyword = $partyKeyword;
+    // }
     return $this;
   }
 
