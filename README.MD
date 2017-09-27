@@ -36,7 +36,9 @@ Available params:
 
 ## TODO
 
-[X] Add comments to the table
+[x] Add comments to the table
+
 [√] Add colors to the cli!
-[X] Add tests
+
+[x] Add tests
  
