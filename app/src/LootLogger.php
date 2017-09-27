@@ -18,9 +18,7 @@ class LootLogger {
    */
   public function __construct($pathToCsvFile, $partyKeyword = self::PARTYKEYWORD){
     $this->pathToCsvFile = $pathToCsvFile;
-    if(isset($partyKeyword)){
-      $this->partyKeyword = $partyKeyword;
-    }
+    $this->partyKeyword = $partyKeyword;
     return $this;
   }
 

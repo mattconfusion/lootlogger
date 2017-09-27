@@ -1,3 +1,4 @@
 app/vendor/
 app/.DS_STORE
 .DS_STORE
+app/.vscode
