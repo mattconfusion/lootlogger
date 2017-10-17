@@ -31,7 +31,7 @@ Results will be displayed in an ASCII table directly in the console.
 
 Available params:
 
-**-p --party-keyword**: change the party keyowrd, default is **party**
+**-p --party-keyword**: change the party keyword, default is **party**
 **-o --output**: output format, either *table* or *list* (default)
 
 ## TODO
