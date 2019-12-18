@@ -40,5 +40,4 @@ Available params:
 
 [√] Add colors to the cli!
 
-[x] Add tests
- 
+[x] Add tests 
